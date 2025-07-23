@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    color: hsl(0, 0%, 93%);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+main{
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.wrapper-logo{
+    background-color: hsl(226, 25%, 17%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    margin-block-start: 40px;
+    color: white;
+}
+
+.wrapper-logo > button{
+    background-color: hsl(226, 11%, 37%);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wrapper-filters{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-start: 40px;
+}
+
+.options-filters{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.options-filters > button{
+    background-color: hsl(226, 11%, 37%);
+    border: none;
+    color: hsl(0, 0%, 78%);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.options-filters button:focus, .options-filters .active{
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+}
+
+.wrapper-extensions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-block-end: 50px;
+}
+
+.extension-card{
+    padding: 20px;
+    background-color: hsl(226, 25%, 17%);
+    border: 0.5px solid hsl(226, 11%, 37%);
+    border-radius: 20px;
+}
+
+.extension-card-description{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.card-description h3, .card-description p{
+    padding: 0;
+    margin: 0;
+}
+
+.card-description p{
+    color: hsl(0, 0%, 78%);
+    margin-block-start: 10px;
+}
+
+.extension-card-actions{
+    margin-block-start: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extension-card-actions button{
+    background-color: transparent;
+    border: 0.5px solid hsl(226, 11%, 37%);
+    color: hsl(0, 0%, 78%);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.custom-toggle {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+
+.custom-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #555;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.custom-toggle input:checked + .slider {
+    background-color: #ff4444; /* Rojo como en la imagen */
+}
+
+.custom-toggle input:checked + .slider::before {
+    transform: translateX(16px);
+}
+
+.hide{
+    display: none;
+}
+
+@media (max-width: 600px){
+    main{
+        max-width: 375px;
+        padding-inline: 20px;
+    }
+
+    .wrapper-logo{
+        padding: 10px;
+    }
+
+    .wrapper-filters{
+        flex-direction: column;
+    }
+
+    .wrapper-extensions{
+        margin-block-start: 35px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+}
