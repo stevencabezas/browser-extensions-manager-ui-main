@@ -34,16 +34,16 @@ export default function Extension(props){
 
     return (
         
-        <div className="extension-card">
+        <div className={props.mode === 'dark' ? 'extension-card dark-mode' : 'extension-card'}>
         <div className="extension-card-description">
             <img src={props.logo} alt="DevLens"/>
-            <div className="card-description">
+            <div className={props.mode === 'dark' ? 'card-description dark-mode' : 'card-description'}>
             <h3>{props.name}</h3>
             <p>{props.description}</p>
             </div>
         </div>
 
-        <div className="extension-card-actions">
+        <div className={props.mode === 'dark' ? 'extension-card-actions dark-mode' : 'extension-card-actions'}>
             <button onClick={removeExtension}>Remove</button>
             <label className="custom-toggle">
             <input className="toggle-extension" type="checkbox" checked={props.isActive} onChange={handleIsActive} />

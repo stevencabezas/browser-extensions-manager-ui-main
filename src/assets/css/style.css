@@ -6,6 +6,11 @@ body{
     background: linear-gradient(180deg, #040918 0%, #091540 100%);
     color: hsl(0, 0%, 93%);
     font-family: 'Noto Sans', sans-serif;
+    min-height: 100vh;
+}
+
+body.dark-mode{
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
 }
 
 main{
@@ -25,12 +30,28 @@ main{
     color: white;
 }
 
+.wrapper-logo.dark-mode {
+    background-color: hsl(200, 60%, 99%);
+}
+
+.logo.light-mode {
+    color: black; 
+}
+
+.logo.dark-mode {
+    color: white;
+}
+
 .wrapper-logo > button{
     background-color: hsl(226, 11%, 37%);
     border: none;
     padding: 12px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.wrapper-logo.dark-mode  > button {
+    background-color: hsl(0, 0%, 93%);
 }
 
 .wrapper-filters{
@@ -40,6 +61,10 @@ main{
     margin-block-start: 40px;
 }
 
+.wrapper-filters.dark-mode {
+    color: hsl(227, 75%, 14%);
+}
+
 .options-filters{
     display: flex;
     align-items: center;
@@ -47,7 +72,7 @@ main{
 }
 
 .options-filters > button{
-    background-color: hsl(226, 11%, 37%);
+    background-color: hsl(225, 23%, 24%);
     border: none;
     color: hsl(0, 0%, 78%);
     padding: 10px 15px;
@@ -56,9 +81,27 @@ main{
     cursor: pointer;
 }
 
+.options-filters.dark-mode > button{
+    background-color: hsl(200, 60%, 99%);
+    color: hsl(227, 75%, 14%);
+}
+
+.options-filters > button:hover{
+    background-color: hsl(226, 11%, 37%);
+}
+
+.options-filters.dark-mode  > button:hover{
+    background-color: hsl(0, 0%, 93%);
+}
+
 .options-filters button:focus, .options-filters .active{
     background-color: hsl(3, 86%, 64%);
     color: hsl(227, 75%, 14%);
+}
+
+.options-filters.dark-mode button:focus, .options-filters.dark-mode .active{
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(200, 60%, 99%);
 }
 
 .wrapper-extensions{
@@ -73,6 +116,12 @@ main{
     background-color: hsl(226, 25%, 17%);
     border: 0.5px solid hsl(226, 11%, 37%);
     border-radius: 20px;
+}
+
+.extension-card.dark-mode{
+    background-color: hsl(200, 60%, 99%);
+    border: 0.5px solid hsl(200, 60%, 99%);
+    color: hsl(227, 75%, 14%);
 }
 
 .extension-card-description{
@@ -91,6 +140,10 @@ main{
     margin-block-start: 10px;
 }
 
+.card-description.dark-mode p{
+    color: hsl(226, 11%, 37%);
+}
+
 .extension-card-actions{
     margin-block-start: 40px;
     display: flex;
@@ -106,6 +159,20 @@ main{
     border-radius: 20px;
     font-size: 15px;
     cursor: pointer;
+}
+
+.extension-card-actions.dark-mode button{
+    color: #091540;
+}
+
+.extension-card-actions button:hover{
+    background-color: #ff4444;
+    color: #091540;
+    border: 0.5px solid #ff4444;
+}
+
+.extension-card-actions.dark-mode button:hover{
+    color: hsl(200, 60%, 99%);
 }
 
 .custom-toggle {
