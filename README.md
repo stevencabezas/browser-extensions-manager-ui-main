@@ -1,3 +1,8 @@
+![dark-mode](public/assets/images/desktop-design-dark.jpg)
+
+![light-mode](public/assets/images/desktop-design-light)
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
