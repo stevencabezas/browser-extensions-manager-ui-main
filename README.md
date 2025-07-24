@@ -1,6 +1,6 @@
 ![dark-mode](public/assets/images/desktop-design-dark.jpg)
 
-![light-mode](public/assets/images/desktop-design-light)
+![light-mode](public/assets/images/desktop-design-light.jpg)
 
 
 # React + Vite
